@@ -79,7 +79,8 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 alias ls=eza
 alias vim='nvim'
 alias c='clear'
-alias ll='ls -la'
+alias ll='ls -la --sort=modified --icons'
+alias gs='git status'
 
 # Shell integrations
 eval "$(fzf --zsh)"
@@ -97,4 +98,6 @@ fi
 export FUNCTIONS_CORE_TOOLS_TELEMETRY_OPTOUT=1
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
 export SSH_AUTH_SOCK=~/.1password/agent.sock
+export EZA_COLORS="${EZA_COLORS}${EZA_COLORS:+:}da=36"
+
 
